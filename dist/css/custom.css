@@ -43,6 +43,17 @@ body {
   color: var(--secondary);
 }
 
+#sobre{
+  display: flex;
+  align-items: center;
+  background-color: rgb(34, 95, 22);
+  height: 100vh;
+}
+
+#sobre img{
+  width: 300px;
+}
+
 #slider {
   height: 100vh;
   background: url(../assets/slider-bg.svg) no-repeat center bottom;
