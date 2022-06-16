@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>upload</h1>
+
+    <form id="upload-form" action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload image" name="submit">
+    </form>
+
+    <div id="gallery">
+
+    </div>
+
+    <script type="text/javascript">
+       const CLIENT_ID = '83d27849304fdd9';
+
+       const doUpload = (url, options) => {
+          const promiseCallback = (resolve, reject) => {
+            fetch(url, options)
+              .then(response => response.json())
+              .then(resolve)
+              .catch(reject);
+          };
+
+         return new Promise(promiseCallback);
+       };
+
+       const addImage = (url) =>{
+          const gallery = document.getElementById('gallery');
+          gallery.innerHTML = `<img src="${url}" with="300"/>`;
+       };
+
+       const onSucces = (result) =>{
+          const {data: { link } } = result;
+          addImage(url)
+       };
+
+       const uploadImage = (e) =>{
+         e.preventDefault();
+
+         const file = document.getElementById('file');
+
+         const data = new FormData();
+         data.append('image', file.files[0]);
+
+            doUpload('https://api.imgur.com/3/image', {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Authorization': `Client_ID ${CLIENT_ID}`,
+            }
+         })
+         .then(console.log)
+         .catch(console.error);
+       }
+
+
+       const form = document.getElementById("upload-form");
+       form.addEventListener('submit', uploadImage)
+
+      
+
+    </script>
+</body>
+</html>

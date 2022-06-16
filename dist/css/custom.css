@@ -298,3 +298,48 @@ body {
 #contato ul li img {
   max-height: 20px;
 }
+
+#imagem-explorar{
+  
+  margin: auto;
+  max-width: 1000px;
+  
+}
+
+
+.card-img{
+  height: 700px;
+}
+
+.titulo-explorar{
+  text-align: center;
+  
+  font-size: 60px;
+}
+
+.videos{
+ 
+  display: flex;
+  background-color: #000;
+  width: 95%;
+  margin: auto;
+  height: 100vh;
+
+  
+}
+
+video{
+ 
+  width: 850px;
+  height: 100%;
+}
+
+.roupas{
+  background-color: #797979;
+  margin: auto;
+  height: 100vh;
+  
+  
+}
+
+
