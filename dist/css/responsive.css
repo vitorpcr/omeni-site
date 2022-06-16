@@ -18,6 +18,17 @@
     width: 90px;
     top: -40px;
   }
+
+  #videos{
+    flex-direction: column;
+   
+   
+  }
+  video{
+    width: 500px;
+    height: 300px;
+    
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -46,4 +57,14 @@
     padding-top: 30px;
     justify-content: center;
   }
+  #videos{
+    flex-direction: column;
+   
+   
+  }
+  video{
+    width: 400px;
+    
+  }
+
 }
