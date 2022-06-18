@@ -7,8 +7,6 @@ html {
 
 
 body {
-  
- 
   padding-bottom: 400px;
 }
 
@@ -69,9 +67,12 @@ body {
 
 #slider {
   height: 90vh;
-  background: url(../assets/slider-bg.svg) no-repeat center bottom;
   background-size: contain;
   
+}
+
+#slider video{
+  position: absolute;
 }
 
 #slider img{
