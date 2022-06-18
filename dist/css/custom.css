@@ -51,6 +51,7 @@ body {
 }
 
 #sobre img{
+ 
   width: 400px;
 }
 
@@ -67,13 +68,14 @@ body {
 
 
 #slider {
-  height: 100vh;
+  height: 90vh;
   background: url(../assets/slider-bg.svg) no-repeat center bottom;
   background-size: contain;
   
 }
 
 #slider img{
+  border-radius: 30px;
   width: 500px;
   height: 500px;
   
