@@ -84,8 +84,10 @@
     justify-content: center;
   }
   #videos{
+    font-size: 12px;
     flex-direction: column;
     height: 800px;
+    width: 80%;
    
    
   }
@@ -94,6 +96,16 @@
     width: 100%;
     
     
+  }
+  button{
+    border-radius: 25px;
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  }
+
+  #slider img{
+    margin-top: 20px;
+   height: 400px;
   }
 
 }
